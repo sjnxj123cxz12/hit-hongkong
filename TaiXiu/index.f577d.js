@@ -598,6 +598,9 @@ n.send(JSON.stringify(e));
 t.customNumdata = function(t) {
 return Math.round(t * lngui.ConfigManager.instance.ConfigInfo.RateMultiple);
 };
+t.convertKeytoString = function(t, e) {
+return lgui.I18nController.convertKeytoString(t, e);
+};
 t.MAX_KEY_VALUE = 8;
 t.MAX_BET_TAI_XIU = 1e21;
 t.MIN_BET = 10;
@@ -710,6 +713,7 @@ e.imgDices = [];
 e.lvTaiContent = null;
 e.lvXiuContent = null;
 e.template = null;
+e.action = cc.rotateBy(.5, 360).repeatForever();
 return e;
 }
 i = e;
@@ -725,8 +729,7 @@ e.prototype.onLoad = function() {
 i._instance = this;
 s.default.instance.sendSignalR("GetSessionResultHistory", [ c.TxConst.diceNode.GameSessionID ]);
 lngui.UIWaitingLayout.showWaiting();
-this.imgEffectTai.setAnimation(0, "Anim_IdleTai", !0);
-this.imgEffectXiu.setAnimation(0, "Anim_IdleXiu", !0);
+this.setDefaultEffect();
 };
 e.prototype.showHistoryTurnTaiXiu = function(t) {
 t && lngui.UIWaitingLayout.hideWaiting();
@@ -736,17 +739,21 @@ this.btnL.node.on(cc.Node.EventType.TOUCH_END, this.touchBtnL, this);
 this.setViewHistoryTurn();
 };
 e.prototype.touchBtnR = function() {
-this.imgEffectTai.setAnimation(0, "Anim_IdleTai", !0);
-this.imgEffectXiu.setAnimation(0, "Anim_IdleXiu", !0);
+this.setDefaultEffect();
 this.m_GameSessionID++;
 this.m_GameSessionID >= c.TxConst.GameSessionID ? this.m_GameSessionID = c.TxConst.GameSessionID - 1 : s.default.instance.sendSignalR("GetSessionResultHistory", [ this.m_GameSessionID ]);
 };
 e.prototype.touchBtnL = function() {
-this.imgEffectTai.setAnimation(0, "Anim_IdleTai", !0);
-this.imgEffectXiu.setAnimation(0, "Anim_IdleXiu", !0);
+this.setDefaultEffect();
 this.m_GameSessionID--;
 cc.log(this.m_GameSessionID);
 this.m_GameSessionID < c.TxConst.GameSessionID - 15 ? this.m_GameSessionID = c.TxConst.GameSessionID - 15 : s.default.instance.sendSignalR("GetSessionResultHistory", [ this.m_GameSessionID ]);
+};
+e.prototype.setDefaultEffect = function() {
+this.imgEffectTai.stopAllActions();
+this.imgEffectXiu.stopAllActions();
+this.imgEffectTai.active = !1;
+this.imgEffectXiu.active = !1;
 };
 e.prototype.setViewHistoryTurn = function() {
 var t = 0, e = 0, n = 0;
@@ -767,11 +774,13 @@ this.txtSessionInfo.getComponent(cc.Label).string = "#" + this.m_GameSessionID;
 var a = this.m_coinData[0].Result.split(",");
 for (o = 0; o < 3; o++) this.XucXac[o].getComponent(cc.Sprite).spriteFrame = this.imgDices[parseInt(a[o]) - 1];
 if (this.m_coinData[0].LocationWinID == c.TxConst.BetGate.GATE_TAI) {
-this.imgEffectTai.setAnimation(0, "Anim_RaTai", !0);
-this.imgEffectXiu.setAnimation(0, "Anim_IdleXiu", !0);
+this.imgEffectTai.active = !0;
+this.imgEffectXiu.active = !1;
+this.imgEffectTai.runAction(this.action);
 } else if (this.m_coinData[0].LocationWinID == c.TxConst.BetGate.GATE_XIU) {
-this.imgEffectTai.setAnimation(0, "Anim_IdleTai", !0);
-this.imgEffectXiu.setAnimation(0, "Anim_RaXiu", !0);
+this.imgEffectTai.active = !1;
+this.imgEffectXiu.active = !0;
+this.imgEffectXiu.runAction(this.action);
 }
 this.txtTotalDice.getComponent(cc.Label).string = "= " + (parseInt(a[0]) + parseInt(a[1]) + parseInt(a[2])).toString();
 this.refreshHistoryTurnTX();
@@ -832,8 +841,8 @@ a([ u(cc.Label) ], e.prototype, "txtTotalDice", void 0);
 a([ u(cc.Label) ], e.prototype, "txtTotalSlotTai", void 0);
 a([ u(cc.Label) ], e.prototype, "txtTotalSlotXiu", void 0);
 a([ u([ cc.Sprite ]) ], e.prototype, "XucXac", void 0);
-a([ u(sp.Skeleton) ], e.prototype, "imgEffectTai", void 0);
-a([ u(sp.Skeleton) ], e.prototype, "imgEffectXiu", void 0);
+a([ u(cc.Node) ], e.prototype, "imgEffectTai", void 0);
+a([ u(cc.Node) ], e.prototype, "imgEffectXiu", void 0);
 a([ u([ cc.SpriteFrame ]) ], e.prototype, "imgDices", void 0);
 a([ u(cc.Node) ], e.prototype, "lvTaiContent", void 0);
 a([ u(cc.Node) ], e.prototype, "lvXiuContent", void 0);
@@ -1811,7 +1820,7 @@ this.m_imgResult.active = !1;
 if (this.m_nLocationIDWin == r.TxConst.BetGate.GATE_TAI) {
 lngui.AudioManager.instance.playSfx(this.KetQua, 1);
 this.m_imgEffectTai.active = !0;
-this.xư.runAction(cc.rotateBy(.5, 360).repeatForever());
+this.m_imgEffectTai.runAction(cc.rotateBy(.5, 360).repeatForever());
 } else if (this.m_nLocationIDWin == r.TxConst.BetGate.GATE_XIU) {
 lngui.AudioManager.instance.playSfx(this.KetQua, 1);
 this.m_imgEffectXiu.active = !0;
@@ -1907,7 +1916,6 @@ lngui.UIPopupManager.instance.showPopupFromPrefab(this.HisTurn);
 };
 e.prototype.touchHistoryTurn2 = function() {
 r.TxConst.diceNode.GameSessionID = parseInt(this.m_llGameSessionID) - 1;
-lngui.UIPopupManager.instance.showPopupFromPrefab(this.HisTurn);
 };
 e.prototype.touchTai = function() {
 lngui.AudioManager.instance.playSfx(this.Click, 1);
@@ -2074,7 +2082,7 @@ return a > 3 && s && Object.defineProperty(e, i, s), s;
 Object.defineProperty(i, "__esModule", {
 value: !0
 });
-var s = t("../popup/Tx.History"), c = t("../popup/Tx.VinhDanh"), r = t("../Tx.Const"), l = t("../Tx.HistoryTurn"), u = t("../Tx.MainGame"), h = t("../popup/Tx.Jackpot"), p = cc._decorator, m = p.ccclass, d = (p.property, 
+var s = t("../popup/Tx.History"), c = t("../popup/Tx.VinhDanh"), r = t("../Tx.Const"), l = t("../Tx.HistoryTurn"), u = t("../Tx.MainGame"), h = t("../popup/Tx.Jackpot"), p = cc._decorator, m = p.ccclass, g = (p.property, 
 function(t) {
 o(e, t);
 function e() {
@@ -2250,7 +2258,7 @@ var i;
 e._instance = null;
 return i = a([ m ], e);
 }(cc.Component));
-i.default = d;
+i.default = g;
 cc._RF.pop();
 }, {
 "../Tx.Const": "Tx.Const",
@@ -2331,6 +2339,7 @@ e.decrementPhase2 = !1;
 return e;
 }
 e.prototype.onEnable = function() {
+var t = this;
 this.buttonL.node.tagName = 0;
 this.buttonR.node.tagName = 1;
 this.tongCb.isSelected = !0;
@@ -2341,7 +2350,9 @@ this.pnlXXT.active = !0;
 this.pnlXX1.active = !0;
 this.pnlXX2.active = !0;
 this.pnlXX3.active = !0;
-this.initData(s.TxConst.dataHistoryGame);
+lgui.I18nController.runWhenScopeReady(this, function() {
+t.initData(s.TxConst.dataHistoryGame);
+}, this);
 };
 e.prototype.initData = function(t) {
 this._arrSC1 = [];
@@ -2370,93 +2381,93 @@ this.pnlXX1.removeAllChildren();
 this.pnlXX2.removeAllChildren();
 this.pnlXX3.removeAllChildren();
 var i = 0, n = 0, o = 0, a = t[0].DiceSum;
-for (var s in t) {
-if (a > 10 && t[s].DiceSum < 11 || a < 11 && t[s].DiceSum > 10) {
-a = t[s].DiceSum;
+for (var c in t) {
+if (a > 10 && t[c].DiceSum < 11 || a < 11 && t[c].DiceSum > 10) {
+a = t[c].DiceSum;
 o++;
 }
-o <= 19 && this._arrSC1.push(t[s]);
+o <= 19 && this._arrSC1.push(t[c]);
 }
-for (var c = [], r = [], l = null, u = 0; u < this._arrSC1.length; u++) {
-var h = this._arrSC1[u].DiceSum > 10;
-null === l && (l = h);
-if (h !== l || r.length >= 6) {
-c.push(r);
-r = [];
-l = h;
+for (var r = [], l = [], u = null, h = 0; h < this._arrSC1.length; h++) {
+var p = this._arrSC1[h].DiceSum > 10;
+null === u && (u = p);
+if (p !== u || l.length >= 6) {
+r.push(l);
+l = [];
+u = p;
 }
-r.push(u);
+l.push(h);
 }
-r.length > 0 && c.push(r);
-for (var p = c.slice(0, 20), m = [ 953, 903, 855, 806, 760, 710, 660, 610, 564, 512, 465, 417, 367, 318, 270, 220, 175, 125, 75, 25 ], d = 0; d < p.length; d++) for (var g = p[d], f = m[d] || m[m.length - 1], _ = g.length - 1, T = 0; T < g.length; T++) {
-var y = g[T], v = this._arrSC1[y], C = _ - T, b = cc.instantiate(this.template);
-b.position = new cc.Vec3(0, 0);
-b.active = !0;
-var x = e[v.DiceSum];
-x && (b.getComponent(cc.Sprite).spriteFrame = x);
-v.DiceSum > 10 ? i++ : n++;
-b.setPosition(this.getPosforSC1(f, C));
-this.pnlSC1.addChild(b);
+l.length > 0 && r.push(l);
+for (var m = r.slice(0, 20), g = [ 953, 903, 855, 806, 760, 710, 660, 610, 564, 512, 465, 417, 367, 318, 270, 220, 175, 125, 75, 25 ], d = 0; d < m.length; d++) for (var f = m[d], _ = g[d] || g[g.length - 1], T = f.length - 1, y = 0; y < f.length; y++) {
+var v = f[y], C = this._arrSC1[v], b = T - y, x = cc.instantiate(this.template);
+x.position = new cc.Vec3(0, 0);
+x.active = !0;
+var S = e[C.DiceSum];
+S && (x.getComponent(cc.Sprite).spriteFrame = S);
+C.DiceSum > 10 ? i++ : n++;
+x.setPosition(this.getPosforSC1(_, b));
+this.pnlSC1.addChild(x);
 }
-for (var S = 0, N = 0, D = 0, B = 0, A = t.length - 1; A >= 0; A--) {
-var X = new cc.Node(), I = X.addComponent(cc.Sprite), E = null;
-if (t[A].DiceSum > 10) {
-E = 0 == A ? this.nutdenActive : this.nutdenIcon;
-D++;
-} else {
-E = 0 == A ? this.nuttrangActive : this.nuttrangIcon;
+for (var N = 0, D = 0, B = 0, A = 0, X = t.length - 1; X >= 0; X--) {
+var E = new cc.Node(), I = E.addComponent(cc.Sprite), R = null;
+if (t[X].DiceSum > 10) {
+R = 0 == X ? this.nutdenActive : this.nutdenIcon;
 B++;
+} else {
+R = 0 == X ? this.nuttrangActive : this.nuttrangIcon;
+A++;
 }
-E && (I.spriteFrame = E);
-X.setPosition(this.getPosforSCmoi(N, S, this.decrementPhase2));
-this.pnlSC2.addChild(X);
-if (5 == ++S) {
-S = 0;
-N++;
+R && (I.spriteFrame = R);
+E.setPosition(this.getPosforSCmoi(D, N, this.decrementPhase2));
+this.pnlSC2.addChild(E);
+if (5 == ++N) {
+N = 0;
+D++;
 0 == this.decrementPhase2 ? this.decrementPhase2 = !0 : this.decrementPhase2 = !1;
 }
 }
-this.lbSc1Duoi.string = "Xỉu: " + n;
-this.lbSc1Tren.string = "Tài: " + i;
-this.lbSc2Duoi.string = "Xỉu: " + B;
-this.lbSc2Tren.string = "Tài: " + D;
+this.lbSc1Duoi.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_xiu") + " " + n;
+this.lbSc1Tren.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_tai") + " " + i;
+this.lbSc2Duoi.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_xiu") + " " + A;
+this.lbSc2Tren.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_tai") + " " + B;
 this.lb1.string = "#" + t[0].GameSessionID;
-t[s].DiceSum > 10 ? this.lb2.string = "Tài (" + t[0].Dice1 + "-" + t[0].Dice2 + "-" + t[0].Dice3 + ")" : this.lb2.string = "Xỉu (" + t[0].Dice1 + "-" + t[0].Dice2 + "-" + t[0].Dice3 + ")";
-for (var R = t.length > 20 ? 20 : t.length, O = (o = 0, R > 20 ? 20 : R); O >= 0; O--) {
-var w = new cc.Node(), M = w.addComponent(cc.Sprite);
-e[t[O].DiceSum] && (M.spriteFrame = e[t[O].DiceSum]);
-w.setPosition(this.getPosforSC2(o, t[O].DiceSum));
-this.pnlXXT.addChild(w, 2);
-var P = new cc.Node();
-P.addComponent(cc.Sprite).spriteFrame = this.ballYellow;
-P.setPosition(this.getPosforSC3(o, t[O].Dice1));
-this.pnlXX1.addChild(P, 2);
+t[c].DiceSum > 10 ? this.lb2.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_tai") + " (" + t[0].Dice1 + "-" + t[0].Dice2 + "-" + t[0].Dice3 + ")" : this.lb2.string = s.TxConst.convertKeytoString(this.node, "taixiu.gate_xiu") + " (" + t[0].Dice1 + "-" + t[0].Dice2 + "-" + t[0].Dice3 + ")";
+for (var O = t.length > 20 ? 20 : t.length, w = (o = 0, O > 20 ? 20 : O); w >= 0; w--) {
+var M = new cc.Node(), P = M.addComponent(cc.Sprite);
+e[t[w].DiceSum] && (P.spriteFrame = e[t[w].DiceSum]);
+M.setPosition(this.getPosforSC2(o, t[w].DiceSum));
+this.pnlXXT.addChild(M, 2);
 var G = new cc.Node();
-G.addComponent(cc.Sprite).spriteFrame = this.ballRed;
-G.setPosition(this.getPosforSC3(o, t[O].Dice2));
-this.pnlXX2.addChild(G, 2);
+G.addComponent(cc.Sprite).spriteFrame = this.ballYellow;
+G.setPosition(this.getPosforSC3(o, t[w].Dice1));
+this.pnlXX1.addChild(G, 2);
 var k = new cc.Node();
-k.addComponent(cc.Sprite).spriteFrame = this.ballBlue;
-k.setPosition(this.getPosforSC3(o, t[O].Dice3));
-this.pnlXX3.addChild(k, 2);
-if (20 == O) {
-var L = this.drawLine(cc.v2(0, this.getPosforSC2(o, t[O].DiceSum).y), this.getPosforSC2(o, t[O].DiceSum), 4, cc.color(252, 249, 128));
-this.pnlXXT.addChild(L, 1);
-var V = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[O].Dice1).y), this.getPosforSC3(o, t[O].Dice1), 4, cc.color(248, 58, 248));
-this.pnlXX1.addChild(V, 1);
-var U = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[O].Dice2).y), this.getPosforSC3(o, t[O].Dice2), 4, cc.color(214, 46, 65));
-this.pnlXX2.addChild(U, 1);
-var H = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[O].Dice3).y), this.getPosforSC3(o, t[O].Dice3), 4, cc.color(70, 255, 142));
-this.pnlXX3.addChild(H, 1);
+k.addComponent(cc.Sprite).spriteFrame = this.ballRed;
+k.setPosition(this.getPosforSC3(o, t[w].Dice2));
+this.pnlXX2.addChild(k, 2);
+var L = new cc.Node();
+L.addComponent(cc.Sprite).spriteFrame = this.ballBlue;
+L.setPosition(this.getPosforSC3(o, t[w].Dice3));
+this.pnlXX3.addChild(L, 2);
+if (20 == w) {
+var V = this.drawLine(cc.v2(0, this.getPosforSC2(o, t[w].DiceSum).y), this.getPosforSC2(o, t[w].DiceSum), 4, cc.color(252, 249, 128));
+this.pnlXXT.addChild(V, 1);
+var U = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[w].Dice1).y), this.getPosforSC3(o, t[w].Dice1), 4, cc.color(248, 58, 248));
+this.pnlXX1.addChild(U, 1);
+var H = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[w].Dice2).y), this.getPosforSC3(o, t[w].Dice2), 4, cc.color(214, 46, 65));
+this.pnlXX2.addChild(H, 1);
+var W = this.drawLine(cc.v2(0, this.getPosforSC3(o, t[w].Dice3).y), this.getPosforSC3(o, t[w].Dice3), 4, cc.color(70, 255, 142));
+this.pnlXX3.addChild(W, 1);
 } else {
-var W = this.drawLine(this.getPosforSC2(o - 1, t[O + 1].DiceSum), this.getPosforSC2(o, t[O].DiceSum), 4, cc.color(252, 249, 128));
-this.pnlXXT.addChild(W, 1);
-var F = this.drawLine(this.getPosforSC3(o - 1, t[O + 1].Dice1), this.getPosforSC3(o, t[O].Dice1), 4, cc.color(248, 58, 248));
-this.pnlXX1.addChild(F, 1);
-var j = this.drawLine(this.getPosforSC3(o - 1, t[O + 1].Dice2), this.getPosforSC3(o, t[O].Dice2), 4, cc.color(214, 46, 65));
-this.pnlXX2.addChild(j, 1);
-var K = this.drawLine(this.getPosforSC3(o - 1, t[O + 1].Dice3), this.getPosforSC3(o, t[O].Dice3), 4, cc.color(70, 255, 142));
-this.pnlXX3.addChild(K, 1);
+var F = this.drawLine(this.getPosforSC2(o - 1, t[w + 1].DiceSum), this.getPosforSC2(o, t[w].DiceSum), 4, cc.color(252, 249, 128));
+this.pnlXXT.addChild(F, 1);
+var j = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice1), this.getPosforSC3(o, t[w].Dice1), 4, cc.color(248, 58, 248));
+this.pnlXX1.addChild(j, 1);
+var K = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice2), this.getPosforSC3(o, t[w].Dice2), 4, cc.color(214, 46, 65));
+this.pnlXX2.addChild(K, 1);
+var J = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice3), this.getPosforSC3(o, t[w].Dice3), 4, cc.color(70, 255, 142));
+this.pnlXX3.addChild(J, 1);
 }
 o++;
 }
@@ -2586,7 +2597,7 @@ return n;
 Object.defineProperty(i, "__esModule", {
 value: !0
 });
-var c = t("../network/Tx.NetworkClient"), r = t("../Tx.Const"), l = cc._decorator, u = l.ccclass, h = l.property, p = new Date(), m = p.getDate() + "/" + (p.getMonth() + 1) + "/" + p.getFullYear(), d = function(t) {
+var c = t("../network/Tx.NetworkClient"), r = t("../Tx.Const"), l = cc._decorator, u = l.ccclass, h = l.property, p = new Date(), m = p.getDate() + "/" + (p.getMonth() + 1) + "/" + p.getFullYear(), g = function(t) {
 o(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
@@ -2673,7 +2684,7 @@ a([ h([ cc.SpriteFrame ]) ], e.prototype, "spfHuanChuong", void 0);
 a([ h(cc.Label) ], e.prototype, "txtDate", void 0);
 return i = a([ u ], e);
 }(cc.Component);
-i.default = d;
+i.default = g;
 cc._RF.pop();
 }, {
 "../Tx.Const": "Tx.Const",
