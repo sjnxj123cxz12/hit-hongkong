@@ -1,0 +1,272 @@
+
+skeleton.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BgXoc
+  rotate: false
+  xy: 0, 566
+  size: 213, 456
+  orig: 213, 456
+  offset: 0, 0
+  index: -1
+Dot_particles/Dot_particles_00
+  rotate: false
+  xy: 405, 829
+  size: 190, 193
+  orig: 200, 200
+  offset: 5, 6
+  index: -1
+Dot_particles/Dot_particles_01
+  rotate: false
+  xy: 578, 250
+  size: 190, 191
+  orig: 200, 200
+  offset: 5, 7
+  index: -1
+Dot_particles/Dot_particles_02
+  rotate: false
+  xy: 769, 444
+  size: 190, 190
+  orig: 200, 200
+  offset: 5, 7
+  index: -1
+Dot_particles/Dot_particles_03
+  rotate: true
+  xy: 1162, 643
+  size: 187, 179
+  orig: 200, 200
+  offset: 4, 11
+  index: -1
+Dot_particles/Dot_particles_04
+  rotate: true
+  xy: 787, 637
+  size: 191, 188
+  orig: 200, 200
+  offset: 4, 8
+  index: -1
+Dot_particles/Dot_particles_05
+  rotate: true
+  xy: 578, 442
+  size: 192, 190
+  orig: 200, 200
+  offset: 4, 7
+  index: -1
+Dot_particles/Dot_particles_06
+  rotate: true
+  xy: 194, 178
+  size: 193, 191
+  orig: 200, 200
+  offset: 3, 6
+  index: -1
+Dot_particles/Dot_particles_07
+  rotate: true
+  xy: 194, 372
+  size: 193, 192
+  orig: 200, 200
+  offset: 4, 5
+  index: -1
+Dot_particles/Dot_particles_08
+  rotate: false
+  xy: 0, 175
+  size: 193, 193
+  orig: 200, 200
+  offset: 4, 4
+  index: -1
+Dot_particles/Dot_particles_09
+  rotate: false
+  xy: 214, 635
+  size: 191, 192
+  orig: 200, 200
+  offset: 5, 4
+  index: -1
+Dot_particles/Dot_particles_10
+  rotate: true
+  xy: 769, 252
+  size: 191, 189
+  orig: 200, 200
+  offset: 5, 7
+  index: -1
+Dot_particles/Dot_particles_11
+  rotate: true
+  xy: 960, 448
+  size: 188, 187
+  orig: 200, 200
+  offset: 6, 12
+  index: -1
+Dot_particles/Dot_particles_12
+  rotate: false
+  xy: 597, 635
+  size: 189, 193
+  orig: 200, 200
+  offset: 5, 6
+  index: -1
+Dot_particles/Dot_particles_13
+  rotate: false
+  xy: 387, 441
+  size: 190, 193
+  orig: 200, 200
+  offset: 4, 5
+  index: -1
+Dot_particles/Dot_particles_14
+  rotate: false
+  xy: 406, 635
+  size: 190, 193
+  orig: 200, 200
+  offset: 3, 4
+  index: -1
+Dot_particles/Dot_particles_15
+  rotate: false
+  xy: 956, 59
+  size: 188, 192
+  orig: 200, 200
+  offset: 3, 4
+  index: -1
+Dot_particles/Dot_particles_16
+  rotate: true
+  xy: 386, 178
+  size: 193, 191
+  orig: 200, 200
+  offset: 0, 4
+  index: -1
+Dot_particles/Dot_particles_17
+  rotate: false
+  xy: 0, 369
+  size: 193, 196
+  orig: 200, 200
+  offset: 0, 4
+  index: -1
+Dot_particles/Dot_particles_18
+  rotate: false
+  xy: 214, 828
+  size: 190, 194
+  orig: 200, 200
+  offset: 0, 6
+  index: -1
+Dot_particles/Dot_particles_19
+  rotate: false
+  xy: 976, 640
+  size: 185, 190
+  orig: 200, 200
+  offset: 5, 5
+  index: -1
+Dot_particles/Dot_particles_20
+  rotate: false
+  xy: 975, 831
+  size: 187, 191
+  orig: 200, 200
+  offset: 5, 4
+  index: -1
+Dot_particles/Dot_particles_21
+  rotate: true
+  xy: 959, 255
+  size: 188, 192
+  orig: 200, 200
+  offset: 5, 3
+  index: -1
+Dot_particles/Dot_particles_22
+  rotate: false
+  xy: 787, 829
+  size: 187, 193
+  orig: 200, 200
+  offset: 7, 7
+  index: -1
+Dot_particles/Dot_particles_23
+  rotate: false
+  xy: 578, 56
+  size: 188, 193
+  orig: 200, 200
+  offset: 6, 7
+  index: -1
+Dot_particles/Dot_particles_24
+  rotate: true
+  xy: 1148, 452
+  size: 187, 182
+  orig: 200, 200
+  offset: 6, 15
+  index: -1
+Dot_particles/Dot_particles_25
+  rotate: false
+  xy: 194, 0
+  size: 187, 177
+  orig: 200, 200
+  offset: 5, 11
+  index: -1
+Dot_particles/Dot_particles_26
+  rotate: true
+  xy: 1163, 837
+  size: 185, 179
+  orig: 200, 200
+  offset: 5, 9
+  index: -1
+Dot_particles/Dot_particles_27
+  rotate: false
+  xy: 1145, 62
+  size: 188, 192
+  orig: 200, 200
+  offset: 5, 8
+  index: -1
+Dot_particles/Dot_particles_28
+  rotate: false
+  xy: 767, 56
+  size: 188, 193
+  orig: 200, 200
+  offset: 6, 7
+  index: -1
+Dot_particles/Dot_particles_29
+  rotate: false
+  xy: 596, 829
+  size: 190, 193
+  orig: 200, 200
+  offset: 5, 6
+  index: -1
+Glass
+  rotate: true
+  xy: 0, 2
+  size: 172, 193
+  orig: 172, 193
+  offset: 0, 0
+  index: -1
+Group 576
+  rotate: true
+  xy: 439, 27
+  size: 71, 50
+  orig: 71, 50
+  offset: 0, 0
+  index: -1
+Layer 1235
+  rotate: true
+  xy: 440, 114
+  size: 63, 56
+  orig: 63, 56
+  offset: 0, 0
+  index: -1
+Layer 1236
+  rotate: true
+  xy: 490, 48
+  size: 65, 50
+  orig: 65, 50
+  offset: 0, 0
+  index: -1
+Layer 1237
+  rotate: true
+  xy: 497, 116
+  size: 61, 50
+  orig: 61, 50
+  offset: 0, 0
+  index: -1
+Shape 1243
+  rotate: true
+  xy: 382, 26
+  size: 72, 56
+  orig: 72, 56
+  offset: 0, 0
+  index: -1
+Shape 1244
+  rotate: true
+  xy: 382, 99
+  size: 78, 57
+  orig: 78, 57
+  offset: 0, 0
+  index: -1

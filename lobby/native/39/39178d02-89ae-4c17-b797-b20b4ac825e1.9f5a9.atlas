@@ -1,0 +1,335 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Sport_Light_mask 2_03
+  rotate: true
+  xy: 374, 801
+  size: 49, 122
+  orig: 180, 180
+  offset: 4, 17
+  index: -1
+Sport_Light_mask 2_04
+  rotate: true
+  xy: 567, 221
+  size: 90, 145
+  orig: 180, 180
+  offset: 3, 6
+  index: -1
+Sport_Light_mask 2_05
+  rotate: false
+  xy: 673, 322
+  size: 104, 140
+  orig: 180, 180
+  offset: 2, 6
+  index: -1
+Sport_Light_mask 2_06
+  rotate: true
+  xy: 826, 440
+  size: 118, 135
+  orig: 180, 180
+  offset: 1, 6
+  index: -1
+Sport_Light_mask 2_07
+  rotate: true
+  xy: 826, 308
+  size: 130, 131
+  orig: 180, 180
+  offset: 1, 6
+  index: -1
+Sport_Light_mask 2_08
+  rotate: false
+  xy: 826, 560
+  size: 140, 136
+  orig: 180, 180
+  offset: 1, 6
+  index: -1
+Sport_Light_mask 2_09
+  rotate: false
+  xy: 673, 569
+  size: 150, 132
+  orig: 180, 180
+  offset: 1, 4
+  index: -1
+Sport_Light_mask 2_10
+  rotate: true
+  xy: 572, 63
+  size: 156, 136
+  orig: 180, 180
+  offset: 1, 2
+  index: -1
+Sport_Light_mask 2_11
+  rotate: true
+  xy: 487, 636
+  size: 163, 132
+  orig: 180, 180
+  offset: 1, 2
+  index: -1
+Sport_Light_mask 2_12
+  rotate: true
+  xy: 437, 234
+  size: 162, 128
+  orig: 180, 180
+  offset: 2, 2
+  index: -1
+Sport_Light_mask 2_13
+  rotate: true
+  xy: 494, 472
+  size: 162, 137
+  orig: 180, 180
+  offset: 2, 2
+  index: -1
+Sport_Light_mask 2_14
+  rotate: true
+  xy: 436, 41
+  size: 167, 134
+  orig: 180, 180
+  offset: 2, 2
+  index: -1
+Sport_Light_mask 2_15
+  rotate: true
+  xy: 212, 454
+  size: 168, 148
+  orig: 180, 180
+  offset: 2, 2
+  index: -1
+Sport_Light_mask 2_16
+  rotate: true
+  xy: 212, 624
+  size: 170, 148
+  orig: 180, 180
+  offset: 3, 1
+  index: -1
+Sport_Light_mask 2_17
+  rotate: true
+  xy: 164, 197
+  size: 173, 148
+  orig: 180, 180
+  offset: 2, 1
+  index: -1
+Sport_Light_mask 2_18
+  rotate: true
+  xy: 1, 6
+  size: 174, 145
+  orig: 180, 180
+  offset: 1, 2
+  index: -1
+Sport_Light_mask 2_19
+  rotate: true
+  xy: 18, 196
+  size: 174, 144
+  orig: 180, 180
+  offset: 1, 1
+  index: -1
+Sport_Light_mask 2_20
+  rotate: true
+  xy: 148, 20
+  size: 174, 141
+  orig: 180, 180
+  offset: 1, 1
+  index: -1
+Sport_Light_mask 2_21
+  rotate: true
+  xy: 291, 23
+  size: 172, 143
+  orig: 180, 180
+  offset: 2, 1
+  index: -1
+Sport_Light_mask 2_22
+  rotate: true
+  xy: 456, 858
+  size: 164, 152
+  orig: 180, 180
+  offset: 4, 1
+  index: -1
+Sport_Light_mask 2_23
+  rotate: true
+  xy: 610, 863
+  size: 159, 132
+  orig: 180, 180
+  offset: 5, 1
+  index: -1
+Sport_Light_mask 2_24
+  rotate: true
+  xy: 362, 466
+  size: 164, 130
+  orig: 180, 180
+  offset: 5, 1
+  index: -1
+Sport_Light_mask 2_25
+  rotate: true
+  xy: 362, 632
+  size: 166, 123
+  orig: 180, 180
+  offset: 5, 1
+  index: -1
+Sport_Light_mask 2_26
+  rotate: true
+  xy: 314, 210
+  size: 168, 121
+  orig: 180, 180
+  offset: 8, 1
+  index: -1
+Sport_Light_mask 2_27
+  rotate: true
+  xy: 224, 852
+  size: 170, 118
+  orig: 180, 180
+  offset: 8, 1
+  index: -1
+Sport_Light_mask 2_28
+  rotate: true
+  xy: 344, 852
+  size: 170, 110
+  orig: 180, 180
+  offset: 9, 3
+  index: -1
+bg
+  rotate: false
+  xy: 1, 796
+  size: 221, 226
+  orig: 221, 226
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 1, 584
+  size: 209, 210
+  orig: 209, 210
+  offset: 0, 0
+  index: -1
+light
+  rotate: true
+  xy: 1, 182
+  size: 188, 15
+  orig: 188, 15
+  offset: 0, 0
+  index: -1
+name
+  rotate: false
+  xy: 380, 398
+  size: 121, 66
+  orig: 121, 66
+  offset: 0, 0
+  index: -1
+name-light-1
+  rotate: true
+  xy: 436, 1
+  size: 38, 48
+  orig: 38, 48
+  offset: 0, 0
+  index: -1
+name-light-2
+  rotate: false
+  xy: 309, 800
+  size: 63, 50
+  orig: 63, 50
+  offset: 0, 0
+  index: -1
+name-light-3
+  rotate: false
+  xy: 498, 815
+  size: 63, 41
+  orig: 63, 41
+  offset: 0, 0
+  index: -1
+name-light-4
+  rotate: true
+  xy: 486, 9
+  size: 30, 41
+  orig: 30, 41
+  offset: 0, 0
+  index: -1
+player-1
+  rotate: false
+  xy: 710, 63
+  size: 114, 156
+  orig: 114, 156
+  offset: 0, 0
+  index: -1
+player-1_1
+  rotate: true
+  xy: 224, 799
+  size: 51, 83
+  orig: 51, 83
+  offset: 0, 0
+  index: -1
+player-1_2
+  rotate: true
+  xy: 826, 698
+  size: 105, 151
+  orig: 105, 151
+  offset: 0, 0
+  index: -1
+player-1_3
+  rotate: false
+  xy: 714, 464
+  size: 105, 103
+  orig: 105, 103
+  offset: 0, 0
+  index: -1
+player-2
+  rotate: false
+  xy: 621, 703
+  size: 113, 158
+  orig: 113, 158
+  offset: 0, 0
+  index: -1
+player-2_1
+  rotate: true
+  xy: 315, 385
+  size: 67, 63
+  orig: 67, 63
+  offset: 0, 0
+  index: -1
+player-2_2
+  rotate: true
+  xy: 826, 911
+  size: 111, 154
+  orig: 111, 154
+  offset: 0, 0
+  index: -1
+player-2_3
+  rotate: true
+  xy: 826, 193
+  size: 113, 115
+  orig: 113, 115
+  offset: 0, 0
+  index: -1
+player-3
+  rotate: false
+  xy: 567, 313
+  size: 104, 157
+  orig: 104, 157
+  offset: 0, 0
+  index: -1
+player-3_1
+  rotate: false
+  xy: 736, 736
+  size: 87, 125
+  orig: 87, 125
+  offset: 0, 0
+  index: -1
+player-3_2
+  rotate: true
+  xy: 826, 805
+  size: 104, 154
+  orig: 104, 154
+  offset: 0, 0
+  index: -1
+player-3_3
+  rotate: true
+  xy: 212, 380
+  size: 72, 101
+  orig: 72, 101
+  offset: 0, 0
+  index: -1
+shadow_inner
+  rotate: false
+  xy: 1, 372
+  size: 209, 210
+  orig: 209, 210
+  offset: 0, 0
+  index: -1

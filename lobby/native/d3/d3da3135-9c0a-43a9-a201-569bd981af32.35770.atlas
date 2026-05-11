@@ -1,0 +1,27 @@
+
+casino-bacarrat.png
+size: 590, 229
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Group 24
+  rotate: true
+  xy: 2, 4
+  size: 223, 460
+  orig: 225, 462
+  offset: 1, 1
+  index: -1
+a
+  rotate: false
+  xy: 464, 93
+  size: 104, 134
+  orig: 107, 136
+  offset: 1, 1
+  index: -1
+j
+  rotate: true
+  xy: 464, 2
+  size: 89, 124
+  orig: 92, 127
+  offset: 2, 2
+  index: -1

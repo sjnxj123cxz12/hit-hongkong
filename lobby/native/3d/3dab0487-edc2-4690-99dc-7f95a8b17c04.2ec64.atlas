@@ -1,0 +1,48 @@
+
+BauCuaLive.png
+size: 313, 584
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+bau
+  rotate: false
+  xy: 217, 142
+  size: 94, 126
+  orig: 94, 126
+  offset: 0, 0
+  index: -1
+bg-bclive
+  rotate: false
+  xy: 2, 126
+  size: 213, 456
+  orig: 215, 458
+  offset: 1, 1
+  index: -1
+cua
+  rotate: false
+  xy: 2, 2
+  size: 176, 122
+  orig: 176, 122
+  offset: 0, 0
+  index: -1
+ga
+  rotate: false
+  xy: 217, 270
+  size: 91, 146
+  orig: 91, 146
+  offset: 0, 0
+  index: -1
+huu
+  rotate: false
+  xy: 217, 418
+  size: 90, 164
+  orig: 90, 164
+  offset: 0, 0
+  index: -1
+light
+  rotate: true
+  xy: 180, 13
+  size: 111, 107
+  orig: 126, 110
+  offset: 2, 1
+  index: -1

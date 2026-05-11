@@ -1,0 +1,559 @@
+
+skeleton.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A
+  rotate: true
+  xy: 1157, 1948
+  size: 98, 141
+  orig: 98, 141
+  offset: 0, 0
+  index: -1
+Card
+  rotate: false
+  xy: 666, 1966
+  size: 137, 80
+  orig: 137, 80
+  offset: 0, 0
+  index: -1
+GameCat_starDOFparticles_00
+  rotate: false
+  xy: 1100, 1430
+  size: 174, 174
+  orig: 200, 200
+  offset: 1, 12
+  index: -1
+GameCat_starDOFparticles_01
+  rotate: false
+  xy: 546, 1273
+  size: 177, 177
+  orig: 200, 200
+  offset: 0, 11
+  index: -1
+GameCat_starDOFparticles_02
+  rotate: true
+  xy: 1584, 1889
+  size: 157, 178
+  orig: 200, 200
+  offset: 21, 10
+  index: -1
+GameCat_starDOFparticles_03
+  rotate: true
+  xy: 1764, 1885
+  size: 161, 165
+  orig: 200, 200
+  offset: 19, 12
+  index: -1
+GameCat_starDOFparticles_04
+  rotate: true
+  xy: 192, 1830
+  size: 164, 166
+  orig: 200, 200
+  offset: 18, 11
+  index: -1
+GameCat_starDOFparticles_05
+  rotate: true
+  xy: 904, 1780
+  size: 167, 171
+  orig: 200, 200
+  offset: 17, 8
+  index: -1
+GameCat_starDOFparticles_06
+  rotate: false
+  xy: 1811, 1714
+  size: 169, 169
+  orig: 200, 200
+  offset: 16, 7
+  index: -1
+GameCat_starDOFparticles_07
+  rotate: false
+  xy: 1, 1500
+  size: 173, 173
+  orig: 200, 200
+  offset: 14, 5
+  index: -1
+GameCat_starDOFparticles_08
+  rotate: true
+  xy: 1464, 1365
+  size: 175, 176
+  orig: 200, 200
+  offset: 13, 4
+  index: -1
+GameCat_starDOFparticles_09
+  rotate: false
+  xy: 184, 1093
+  size: 180, 180
+  orig: 200, 200
+  offset: 11, 2
+  index: -1
+GameCat_starDOFparticles_10
+  rotate: true
+  xy: 555, 1072
+  size: 180, 182
+  orig: 200, 200
+  offset: 12, 1
+  index: -1
+GameCat_starDOFparticles_11
+  rotate: true
+  xy: 1276, 1191
+  size: 178, 185
+  orig: 200, 200
+  offset: 16, 0
+  index: -1
+GameCat_starDOFparticles_12
+  rotate: true
+  xy: 739, 1071
+  size: 180, 186
+  orig: 200, 200
+  offset: 15, 0
+  index: -1
+GameCat_starDOFparticles_13
+  rotate: true
+  xy: 193, 905
+  size: 185, 188
+  orig: 200, 200
+  offset: 13, 0
+  index: -1
+GameCat_starDOFparticles_14
+  rotate: false
+  xy: 927, 1069
+  size: 187, 180
+  orig: 200, 200
+  offset: 12, 9
+  index: -1
+GameCat_starDOFparticles_15
+  rotate: false
+  xy: 1, 907
+  size: 190, 184
+  orig: 200, 200
+  offset: 10, 7
+  index: -1
+GameCat_starDOFparticles_16
+  rotate: false
+  xy: 1116, 1009
+  size: 188, 180
+  orig: 200, 200
+  offset: 9, 8
+  index: -1
+GameCat_starDOFparticles_17
+  rotate: false
+  xy: 189, 1275
+  size: 176, 176
+  orig: 200, 200
+  offset: 6, 14
+  index: -1
+GameCat_starDOFparticles_18
+  rotate: true
+  xy: 1463, 1183
+  size: 178, 179
+  orig: 200, 200
+  offset: 5, 12
+  index: -1
+GameCat_starDOFparticles_19
+  rotate: true
+  xy: 1675, 999
+  size: 181, 183
+  orig: 200, 200
+  offset: 3, 10
+  index: -1
+GameCat_starDOFparticles_20
+  rotate: true
+  xy: 1860, 997
+  size: 183, 186
+  orig: 200, 200
+  offset: 2, 9
+  index: -1
+GameCat_starDOFparticles_21
+  rotate: true
+  xy: 383, 883
+  size: 187, 190
+  orig: 200, 200
+  offset: 0, 7
+  index: -1
+GameCat_starDOFparticles_22
+  rotate: true
+  xy: 575, 881
+  size: 188, 192
+  orig: 200, 200
+  offset: 0, 6
+  index: -1
+GameCat_starDOFparticles_23
+  rotate: false
+  xy: 1, 1846
+  size: 189, 162
+  orig: 200, 200
+  offset: 0, 20
+  index: -1
+GameCat_starDOFparticles_24
+  rotate: false
+  xy: 360, 1825
+  size: 178, 164
+  orig: 200, 200
+  offset: 12, 19
+  index: -1
+GameCat_starDOFparticles_25
+  rotate: false
+  xy: 1077, 1779
+  size: 179, 167
+  orig: 200, 200
+  offset: 10, 17
+  index: -1
+GameCat_starDOFparticles_26
+  rotate: false
+  xy: 1258, 1779
+  size: 181, 167
+  orig: 200, 200
+  offset: 9, 18
+  index: -1
+GameCat_starDOFparticles_27
+  rotate: false
+  xy: 1477, 1542
+  size: 184, 172
+  orig: 200, 200
+  offset: 7, 16
+  index: -1
+GameCat_starDOFparticles_28
+  rotate: false
+  xy: 1276, 1371
+  size: 186, 174
+  orig: 200, 200
+  offset: 6, 15
+  index: -1
+GameCat_starDOFparticles_29
+  rotate: false
+  xy: 1644, 1183
+  size: 178, 178
+  orig: 200, 200
+  offset: 4, 13
+  index: -1
+GameCat_starDOFparticles_30
+  rotate: false
+  xy: 1306, 1001
+  size: 183, 180
+  orig: 200, 200
+  offset: 4, 12
+  index: -1
+GameCat_starDOFparticles_31
+  rotate: true
+  xy: 1441, 1720
+  size: 167, 184
+  orig: 200, 200
+  offset: 17, 10
+  index: -1
+GameCat_starDOFparticles_32
+  rotate: true
+  xy: 1, 1675
+  size: 169, 185
+  orig: 200, 200
+  offset: 16, 10
+  index: -1
+GameCat_starDOFparticles_33
+  rotate: true
+  xy: 176, 1479
+  size: 173, 184
+  orig: 200, 200
+  offset: 14, 12
+  index: -1
+GameCat_starDOFparticles_34
+  rotate: true
+  xy: 367, 1274
+  size: 176, 177
+  orig: 200, 200
+  offset: 13, 12
+  index: -1
+GameCat_starDOFparticles_35
+  rotate: false
+  xy: 1642, 1363
+  size: 177, 175
+  orig: 200, 200
+  offset: 14, 16
+  index: -1
+GameCat_starDOFparticles_36
+  rotate: false
+  xy: 725, 1254
+  size: 178, 177
+  orig: 200, 200
+  offset: 14, 15
+  index: -1
+GameCat_starDOFparticles_37
+  rotate: false
+  xy: 540, 1799
+  size: 179, 165
+  orig: 200, 200
+  offset: 15, 13
+  index: -1
+GameCat_starDOFparticles_38
+  rotate: false
+  xy: 721, 1798
+  size: 181, 165
+  orig: 200, 200
+  offset: 14, 14
+  index: -1
+GameCat_starDOFparticles_39
+  rotate: false
+  xy: 188, 1654
+  size: 186, 169
+  orig: 200, 200
+  offset: 11, 12
+  index: -1
+GameCat_starDOFparticles_40
+  rotate: false
+  xy: 738, 1608
+  size: 181, 170
+  orig: 200, 200
+  offset: 10, 11
+  index: -1
+GameCat_starDOFparticles_41
+  rotate: false
+  xy: 362, 1453
+  size: 180, 173
+  orig: 200, 200
+  offset: 8, 10
+  index: -1
+GameCat_starDOFparticles_42
+  rotate: false
+  xy: 1821, 1363
+  size: 182, 175
+  orig: 200, 200
+  offset: 7, 9
+  index: -1
+GameCat_starDOFparticles_43
+  rotate: false
+  xy: 1824, 1182
+  size: 185, 179
+  orig: 200, 200
+  offset: 5, 7
+  index: -1
+GameCat_starDOFparticles_44
+  rotate: false
+  xy: 366, 1092
+  size: 187, 179
+  orig: 200, 200
+  offset: 4, 8
+  index: -1
+GameCat_starDOFparticles_45
+  rotate: false
+  xy: 1627, 1716
+  size: 182, 167
+  orig: 200, 200
+  offset: 7, 17
+  index: -1
+GameCat_starDOFparticles_46
+  rotate: false
+  xy: 376, 1628
+  size: 183, 169
+  orig: 200, 200
+  offset: 6, 16
+  index: -1
+GameCat_starDOFparticles_47
+  rotate: false
+  xy: 544, 1452
+  size: 187, 173
+  orig: 200, 200
+  offset: 4, 14
+  index: -1
+GameCat_starDOFparticles_48
+  rotate: true
+  xy: 561, 1627
+  size: 169, 175
+  orig: 200, 200
+  offset: 11, 13
+  index: -1
+GameCat_starDOFparticles_49
+  rotate: true
+  xy: 733, 1433
+  size: 173, 179
+  orig: 200, 200
+  offset: 9, 11
+  index: -1
+GameCat_starDOFparticles_50
+  rotate: true
+  xy: 1663, 1540
+  size: 172, 181
+  orig: 200, 200
+  offset: 10, 10
+  index: -1
+GameCat_starDOFparticles_51
+  rotate: true
+  xy: 921, 1606
+  size: 171, 185
+  orig: 200, 200
+  offset: 13, 8
+  index: -1
+GameCat_starDOFparticles_52
+  rotate: true
+  xy: 1846, 1540
+  size: 172, 186
+  orig: 200, 200
+  offset: 12, 7
+  index: -1
+GameCat_starDOFparticles_53
+  rotate: true
+  xy: 914, 1431
+  size: 173, 184
+  orig: 200, 200
+  offset: 10, 5
+  index: -1
+GameCat_starDOFparticles_54
+  rotate: true
+  xy: 1, 1302
+  size: 175, 186
+  orig: 200, 200
+  offset: 9, 4
+  index: -1
+GameCat_starDOFparticles_55
+  rotate: true
+  xy: 905, 1253
+  size: 176, 189
+  orig: 200, 200
+  offset: 7, 3
+  index: -1
+GameCat_starDOFparticles_56
+  rotate: true
+  xy: 1096, 1251
+  size: 177, 178
+  orig: 200, 200
+  offset: 6, 15
+  index: -1
+GameCat_starDOFparticles_57
+  rotate: false
+  xy: 1, 1121
+  size: 181, 179
+  orig: 200, 200
+  offset: 4, 16
+  index: -1
+GameCat_starDOFparticles_58
+  rotate: false
+  xy: 1491, 1001
+  size: 182, 180
+  orig: 200, 200
+  offset: 3, 15
+  index: -1
+GameCat_starDOFparticles_59
+  rotate: true
+  xy: 1108, 1606
+  size: 171, 182
+  orig: 200, 200
+  offset: 2, 13
+  index: -1
+K
+  rotate: true
+  xy: 1015, 1949
+  size: 97, 140
+  orig: 97, 140
+  offset: 0, 0
+  index: -1
+Q
+  rotate: true
+  xy: 1300, 1948
+  size: 98, 141
+  orig: 98, 141
+  offset: 0, 0
+  index: -1
+category-card
+  rotate: true
+  xy: 769, 786
+  size: 221, 468
+  orig: 221, 468
+  offset: 0, 0
+  index: -1
+chip1
+  rotate: false
+  xy: 237, 1996
+  size: 52, 50
+  orig: 52, 50
+  offset: 0, 0
+  index: -1
+chip2
+  rotate: false
+  xy: 291, 1996
+  size: 81, 50
+  orig: 81, 50
+  offset: 0, 0
+  index: -1
+chip3
+  rotate: false
+  xy: 374, 1994
+  size: 81, 52
+  orig: 81, 52
+  offset: 0, 0
+  index: -1
+chip4
+  rotate: true
+  xy: 62, 2012
+  size: 34, 36
+  orig: 34, 36
+  offset: 0, 0
+  index: -1
+chip5
+  rotate: false
+  xy: 157, 2010
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+chip6
+  rotate: false
+  xy: 197, 2010
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+light1
+  rotate: false
+  xy: 805, 1965
+  size: 208, 81
+  orig: 208, 81
+  offset: 0, 0
+  index: -1
+light2
+  rotate: false
+  xy: 1292, 1547
+  size: 183, 171
+  orig: 183, 171
+  offset: 0, 0
+  index: -1
+light3
+  rotate: false
+  xy: 1443, 1907
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+name-light-1
+  rotate: true
+  xy: 1, 2017
+  size: 29, 59
+  orig: 29, 59
+  offset: 0, 0
+  index: -1
+name-light-2
+  rotate: false
+  xy: 594, 1987
+  size: 70, 59
+  orig: 70, 59
+  offset: 0, 0
+  index: -1
+name-light-3
+  rotate: false
+  xy: 457, 1992
+  size: 70, 54
+  orig: 70, 54
+  offset: 0, 0
+  index: -1
+name-light-4
+  rotate: false
+  xy: 529, 1991
+  size: 63, 55
+  orig: 63, 55
+  offset: 0, 0
+  index: -1
+name-light-5
+  rotate: true
+  xy: 100, 2012
+  size: 34, 55
+  orig: 34, 55
+  offset: 0, 0
+  index: -1

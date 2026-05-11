@@ -1,0 +1,34 @@
+
+casino-blackjack.png
+size: 697, 227
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+7
+  rotate: true
+  xy: 464, 110
+  size: 115, 139
+  orig: 117, 141
+  offset: 1, 1
+  index: -1
+Group 25
+  rotate: true
+  xy: 2, 2
+  size: 223, 460
+  orig: 225, 462
+  offset: 1, 1
+  index: -1
+holo
+  rotate: true
+  xy: 605, 89
+  size: 136, 90
+  orig: 138, 93
+  offset: 1, 2
+  index: -1
+k
+  rotate: true
+  xy: 464, 6
+  size: 102, 131
+  orig: 104, 133
+  offset: 1, 1
+  index: -1

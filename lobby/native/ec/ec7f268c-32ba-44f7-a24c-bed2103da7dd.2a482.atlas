@@ -1,0 +1,153 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 1428
+  rotate: false
+  xy: 324, 317
+  size: 95, 56
+  orig: 95, 56
+  offset: 0, 0
+  index: -1
+Layer 1429
+  rotate: true
+  xy: 435, 244
+  size: 178, 86
+  orig: 178, 86
+  offset: 0, 0
+  index: -1
+Layer 1430
+  rotate: true
+  xy: 224, 580
+  size: 160, 164
+  orig: 160, 164
+  offset: 0, 0
+  index: -1
+Layer 1431
+  rotate: false
+  xy: 224, 275
+  size: 98, 98
+  orig: 98, 98
+  offset: 0, 0
+  index: -1
+Layer 1433
+  rotate: true
+  xy: 1, 1
+  size: 269, 373
+  orig: 269, 373
+  offset: 0, 0
+  index: -1
+Layer 1434
+  rotate: false
+  xy: 390, 607
+  size: 136, 133
+  orig: 136, 133
+  offset: 0, 0
+  index: -1
+Layer 1435
+  rotate: true
+  xy: 426, 177
+  size: 65, 138
+  orig: 65, 138
+  offset: 0, 0
+  index: -1
+Layer 1436
+  rotate: false
+  xy: 375, 285
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+Layer 1437
+  rotate: true
+  xy: 408, 295
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+Layer 711
+  rotate: true
+  xy: 535, 500
+  size: 34, 67
+  orig: 34, 67
+  offset: 0, 0
+  index: -1
+Rectangle 1451
+  rotate: false
+  xy: 1, 272
+  size: 221, 468
+  orig: 221, 468
+  offset: 0, 0
+  index: -1
+gunfire_particles_root_01
+  rotate: true
+  xy: 224, 423
+  size: 155, 162
+  orig: 155, 162
+  offset: 0, 0
+  index: -1
+gunfire_particles_root_02
+  rotate: true
+  xy: 390, 485
+  size: 120, 143
+  orig: 120, 143
+  offset: 0, 0
+  index: -1
+gunfire_particles_root_03
+  rotate: true
+  xy: 528, 621
+  size: 119, 157
+  orig: 119, 157
+  offset: 0, 0
+  index: -1
+light
+  rotate: true
+  xy: 409, 105
+  size: 188, 15
+  orig: 188, 15
+  offset: 0, 0
+  index: -1
+name
+  rotate: false
+  xy: 535, 536
+  size: 149, 83
+  orig: 149, 83
+  offset: 0, 0
+  index: -1
+name-light1
+  rotate: false
+  xy: 376, 224
+  size: 31, 59
+  orig: 31, 59
+  offset: 0, 0
+  index: -1
+name-light2
+  rotate: false
+  xy: 388, 424
+  size: 77, 59
+  orig: 77, 59
+  offset: 0, 0
+  index: -1
+name-light3
+  rotate: false
+  xy: 467, 434
+  size: 77, 49
+  orig: 77, 49
+  offset: 0, 0
+  index: -1
+name-light4
+  rotate: true
+  xy: 324, 276
+  size: 39, 49
+  orig: 39, 49
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 224, 375
+  size: 209, 46
+  orig: 209, 46
+  offset: 0, 0
+  index: -1
