@@ -2994,8 +2994,9 @@ var t = lngui.ClientData.getNumber("music", 1), e = lngui.ClientData.getNumber("
 0 == e ? this.cbSound.uncheck() : this.cbSound.check();
 };
 e.prototype.onClickLanguage = function(t, e) {
-cc.log("setlang: ", e);
 lngui.I18nController.setLang(e);
+this.hide();
+lngui.UIPopupManager.instance.showPopup(lgui.I18nController.convertKeytoString(this.node, "common.change_langeuage_success"));
 };
 r([ s(cc.Toggle) ], e.prototype, "cbSound", void 0);
 r([ s(cc.Toggle) ], e.prototype, "cbMusic", void 0);
@@ -8484,6 +8485,9 @@ return t.includes(" ");
 };
 t.isValidNameWithoutDiacritics = function(t) {
 return 0 !== (t = t.trim()).length && /^[A-Za-z]+(\s[A-Za-z]+)+$/.test(t);
+};
+t.prototype.convertKeytoString = function(t, e) {
+return lgui.I18nController.convertKeytoString(t, e);
 };
 t.sdkFbWeb = null;
 return t;

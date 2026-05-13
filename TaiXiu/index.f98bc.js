@@ -1114,7 +1114,9 @@ configurable: !0
 e.prototype.onEnable = function() {
 lngui.UIWaitingLayout.showWaiting();
 i._instance = this;
+lgui.I18nController.runWhenScopeReady(this, function() {
 s.default.instance.sendSignalR("GetJackpotHistory", []);
+}, this);
 };
 e.prototype.intDataJP = function(t) {
 lngui.UIWaitingLayout.hideWaiting();
@@ -1149,12 +1151,12 @@ e.prototype.showTopJackpotTX = function(t) {
 if (t) {
 t && lngui.UIWaitingLayout.hideWaiting();
 this.contentUser.removeAllChildren();
-this.TxtPage.string = "Trang: " + (this.index + 1);
+this.TxtPage.string = c.TxConst.convertKeytoString(this.node, "taixiu.page") + ": " + (this.index + 1);
 this.txtPhien.string = t.GameSessionID;
 this.txtTime.string = c.TxConst.formatDateTime2(t.SessionTime);
 this.txtJpValue.string = c.TxConst.formatNumber(t.TotalJackpot);
 this.txtTotalUser.string = t.TotalUser.toString();
-this.txtResult.string = 1 == t.LocationIDWin ? "Tài" : "Xỉu";
+this.txtResult.string = 1 == t.LocationIDWin ? c.TxConst.convertKeytoString(this.node, "taixiu.gate_tai") : c.TxConst.convertKeytoString(this.node, "taixiu.gate_xiu");
 for (var e = t.Data, i = 0; i < e.length; i++) {
 var n = e[i], o = cc.instantiate(this.templateUser);
 o.active = !0;
@@ -2462,10 +2464,10 @@ this.pnlXX3.addChild(W, 1);
 } else {
 var F = this.drawLine(this.getPosforSC2(o - 1, t[w + 1].DiceSum), this.getPosforSC2(o, t[w].DiceSum), 4, cc.color(252, 249, 128));
 this.pnlXXT.addChild(F, 1);
-var j = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice1), this.getPosforSC3(o, t[w].Dice1), 4, cc.color(248, 58, 248));
-this.pnlXX1.addChild(j, 1);
-var K = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice2), this.getPosforSC3(o, t[w].Dice2), 4, cc.color(214, 46, 65));
-this.pnlXX2.addChild(K, 1);
+var K = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice1), this.getPosforSC3(o, t[w].Dice1), 4, cc.color(248, 58, 248));
+this.pnlXX1.addChild(K, 1);
+var j = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice2), this.getPosforSC3(o, t[w].Dice2), 4, cc.color(214, 46, 65));
+this.pnlXX2.addChild(j, 1);
 var J = this.drawLine(this.getPosforSC3(o - 1, t[w + 1].Dice3), this.getPosforSC3(o, t[w].Dice3), 4, cc.color(70, 255, 142));
 this.pnlXX3.addChild(J, 1);
 }
